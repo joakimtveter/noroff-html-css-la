@@ -3,3 +3,10 @@
 *::after {
     box-sizing: border-box;
 }
+
+:root {
+
+    /* COLOR PALETE */
+    --color-black: hsl(0, 0%, 13%);
+
+}
