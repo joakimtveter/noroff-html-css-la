@@ -8,5 +8,47 @@
 
     /* COLOR PALETE */
     --color-black: hsl(0, 0%, 13%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey: hsl(0, 0%, 91%);
+    --color-light-grey: hsl(0, 0%, 98%);
+    --color-red: hsl(0, 100%, 37%);
+    --color-green: hsl(111, 100%, 23%);
+}
 
+.site-header {
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+.btn {
+    color: var(--color-white);
+    background-color: var(--color-red);
+    text-transform: uppercase;
+    border-radius: 6px;
+}
+
+.btn-sale {
+    background-color: var(--color-green);
+}
+
+.site-footer {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    text-align: center;
+}
+
+.branding a {
+    color: var(--color-white);
+}
+
+.main-nav__link {
+    color: var(--color-white);
+}
+
+.skin-medium {
+    background-color: var(--color-grey);
+}
+
+.skin-light {
+    background-color: var(--color-light-grey);
 }
