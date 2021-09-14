@@ -1,8 +1,5 @@
-@font-face {
-    font-family: "Boots And Spurs";
-    src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
-}  
-
+/*     RESETS    */
+/*****************/
 *,
 *::before,
 *::after {
@@ -13,7 +10,7 @@
 
 :root {
 
-    /* COLOR PALETE */
+    /* Color palete */
     --color-black: hsl(0, 0%, 13%);
     --color-white: hsl(0, 0%, 100%);
     --color-grey: hsl(0, 0%, 91%);
@@ -21,13 +18,19 @@
     --color-red: hsl(0, 100%, 37%);
     --color-green: hsl(111, 100%, 23%);
 
-    /* TYPOGRAPHY */
+    /* Typography */
     --ff-heading: "Boots And Spurs";
     --ff-body: "Roboto", Helvetica, Arial, sans-serif;
+    --fs-h1: 2.5rem;
 
 }
 /*   TYPOGRAPHY  */
 /*****************/
+
+@font-face {
+    font-family: "Boots And Spurs";
+    src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+}  
 
 body {
     font-family: var(--ff-body);
@@ -36,6 +39,8 @@ body {
 h1,
 h2 {
     font-family: var(--ff-heading);
+    font-size: var(--fs-h1);
+    margin-bottom: 2.5rem; /* 40px */
 }
 
 /*  SITE HEADER  */
@@ -89,22 +94,41 @@ h2 {
 
 /*   COMPONENTS  */
 /*****************/
+
+/* BUTTONS */
 .btn {
+    display: inline-block;
+    font-size: 0.875rem;
     color: var(--color-white);
-    background-color: var(--color-red);
     text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--color-red);
     border-radius: 6px;
+    padding: 0.8em 1.75em;
 }
 
 .btn-sale {
     background-color: var(--color-green);
 }
 
+/* JUMBOTRON */
 .jumbotron {
     height: 760px;
     background-size: cover;
     background-position: bottom left;
 }
+
+
+.jumbotron .btn {
+    font-size: 1.5625rem;
+    padding-inline: 5em;
+}
+
+/* REVIEWS */
+.review__img {
+    border-radius: 50%;
+}
+
 
 /*   INDEX PAGE  */
 /*****************/
@@ -115,8 +139,4 @@ h2 {
 
 #about-our-guitars img {
 border-radius: 20%;
-}
-
-.review__img {
-    border-radius: 50%;
 }
