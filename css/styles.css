@@ -7,6 +7,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -24,20 +26,11 @@
     --ff-body: "Roboto", Helvetica, Arial, sans-serif;
 
 }
+/*   TYPOGRAPHY  */
+/*****************/
 
 body {
     font-family: var(--ff-body);
-}
-
-.site-header {
-    color: var(--color-white);
-    background-color: var(--color-black);
-}
-
-.branding a{
-    font-family: var(--ff-heading);
-    font-size: 2. 8125rem;
-    text-decoration: none;
 }
 
 h1,
@@ -45,6 +38,47 @@ h2 {
     font-family: var(--ff-heading);
 }
 
+/*  SITE HEADER  */
+/*****************/
+
+.site-header {
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+.branding a{
+    color: var(--color-white);
+    font-family: var(--ff-heading);
+    font-size: 2.8125rem;
+    text-decoration: none;
+}
+
+.main-nav__link {
+    color: var(--color-white);
+}
+
+/*  SITE FOOTER   */
+/*****************/
+
+.site-footer {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    text-align: center;
+}
+
+/*  THEMEING   */
+/*****************/
+
+.skin-medium {
+    background-color: var(--color-grey);
+}
+
+.skin-light {
+    background-color: var(--color-light-grey);
+}
+
+/*   COMPONENTS  */
+/*****************/
 .btn {
     color: var(--color-white);
     background-color: var(--color-red);
@@ -56,24 +90,23 @@ h2 {
     background-color: var(--color-green);
 }
 
-.site-footer {
-    color: var(--color-white);
-    background-color: var(--color-black);
-    text-align: center;
+.jumbotron {
+    height: 760px;
+    background-size: cover;
+    background-position: bottom left;
 }
 
-.branding a {
-    color: var(--color-white);
+/*   INDEX PAGE  */
+/*****************/
+
+#front-page-jumbotron {
+    background-image: url(../images/home-header.jpg);
 }
 
-.main-nav__link {
-    color: var(--color-white);
+#about-our-guitars img {
+border-radius: 20%;
 }
 
-.skin-medium {
-    background-color: var(--color-grey);
-}
-
-.skin-light {
-    background-color: var(--color-light-grey);
+.review__img {
+    border-radius: 50%;
 }
