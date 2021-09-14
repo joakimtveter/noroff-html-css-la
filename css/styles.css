@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Boots And Spurs";
+    src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+}  
+
 *,
 *::before,
 *::after {
@@ -13,11 +18,31 @@
     --color-light-grey: hsl(0, 0%, 98%);
     --color-red: hsl(0, 100%, 37%);
     --color-green: hsl(111, 100%, 23%);
+
+    /* TYPOGRAPHY */
+    --ff-heading: "Boots And Spurs";
+    --ff-body: "Roboto", Helvetica, Arial, sans-serif;
+
+}
+
+body {
+    font-family: var(--ff-body);
 }
 
 .site-header {
     color: var(--color-white);
     background-color: var(--color-black);
+}
+
+.branding a{
+    font-family: var(--ff-heading);
+    font-size: 2. 8125rem;
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-family: var(--ff-heading);
 }
 
 .btn {
