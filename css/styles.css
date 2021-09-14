@@ -53,10 +53,20 @@ h2 {
     text-decoration: none;
 }
 
-.main-nav__link {
-    color: var(--color-white);
+.main-nav ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
 }
 
+.main-nav__link {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.main-nav__link.active {
+    text-decoration: underline;
+}
 /*  SITE FOOTER   */
 /*****************/
 
