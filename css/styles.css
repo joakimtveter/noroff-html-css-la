@@ -103,6 +103,10 @@ main > h1 {
   text-align: center;
 }
 
+section {
+  padding-block-end: 3rem;
+}
+
 section > h2 {
   padding-block-start: 2rem;
   text-align: center;
@@ -133,6 +137,7 @@ section > h2 {
 /* BUTTONS */
 .btn {
   display: inline-block;
+  text-align: center;
   font-size: 0.875rem;
   color: var(--color-white);
   text-transform: uppercase;
@@ -171,6 +176,7 @@ section > h2 {
 
 .reviews {
   display: flex;
+  gap: 2rem;
 }
 
 .review__img {
@@ -179,10 +185,38 @@ section > h2 {
   float: right;
 }
 
+/* PRODUCT CARDS */
+
+.product-card img {
+  max-width: 100%;
+}
+.product-card__body {
+  display: grid;
+  grid-template-areas:
+    "name button"
+    "price button";
+}
+.product-card__name {
+  grid-area: name;
+}
+.product-card__price {
+  grid-area: price;
+}
+
+.product-card__old-price {
+  text-decoration: line-through;
+  color: hsl(0, 0%, 30%);
+}
+
+.product-card__button {
+  justify-self: self-end;
+  grid-area: button;
+}
+
 /*   INDEX PAGE  */
 /*****************/
 
-#front-page-jumbotron {
+#index-page .jumbotron {
   background-image: url(../images/home-header.jpg);
 }
 #about-our-guitars {
@@ -191,19 +225,35 @@ section > h2 {
   padding: 6.25rem;
 }
 
-#about-our-guitars ul {
-  padding-inline-start: 2rem;
-}
-
 .about-section__content {
   flex: 1;
   min-width: max-content;
+}
+
+.about-section__content ul {
+  padding-inline-start: 2rem;
 }
 
 #about-our-guitars img {
   border-radius: 106px;
   flex: 1;
   max-height: 440px;
+}
+#index-page .product-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/*  GUITAR PAGE   */
+/******************/
+
+#Guitar-Page .product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+  padding-block-end: 2rem;
 }
 
 /*  CONTACT PAGE   */
