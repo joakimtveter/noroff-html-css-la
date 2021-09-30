@@ -3,149 +3,292 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
+  /* Color palete */
+  --color-black: hsl(0, 0%, 13%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(0, 0%, 91%);
+  --color-light-grey: hsl(0, 0%, 98%);
+  --color-red: hsl(0, 100%, 37%);
+  --color-green: hsl(111, 100%, 23%);
 
-    /* Color palete */
-    --color-black: hsl(0, 0%, 13%);
-    --color-white: hsl(0, 0%, 100%);
-    --color-grey: hsl(0, 0%, 91%);
-    --color-light-grey: hsl(0, 0%, 98%);
-    --color-red: hsl(0, 100%, 37%);
-    --color-green: hsl(111, 100%, 23%);
+  /* Typography */
+  --ff-heading: "Boots And Spurs";
+  --ff-body: "Roboto", Helvetica, Arial, sans-serif;
+  --fs-h1: 2.5rem;
 
-    /* Typography */
-    --ff-heading: "Boots And Spurs";
-    --ff-body: "Roboto", Helvetica, Arial, sans-serif;
-    --fs-h1: 2.5rem;
-
+  /* Layout */
+  --header-height: 120px;
+  --footer-height: 100px;
 }
 /*   TYPOGRAPHY  */
 /*****************/
 
 @font-face {
-    font-family: "Boots And Spurs";
-    src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
-}  
+  font-family: "Boots And Spurs";
+  src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+}
 
 body {
-    font-family: var(--ff-body);
+  font-family: var(--ff-body);
 }
 
 h1,
 h2 {
-    font-family: var(--ff-heading);
-    font-size: var(--fs-h1);
-    margin-bottom: 2.5rem; /* 40px */
-}
-
-/*  SITE HEADER  */
-/*****************/
-
-.site-header {
-    color: var(--color-white);
-    background-color: var(--color-black);
-}
-
-.branding a{
-    color: var(--color-white);
-    font-family: var(--ff-heading);
-    font-size: 2.8125rem;
-    text-decoration: none;
-}
-
-.main-nav ul {
-    display: flex;
-    gap: 2em;
-    list-style: none;
-}
-
-.main-nav__link {
-    color: var(--color-white);
-    text-decoration: none;
-}
-
-.main-nav__link.active {
-    text-decoration: underline;
-}
-/*  SITE FOOTER   */
-/*****************/
-
-.site-footer {
-    color: var(--color-white);
-    background-color: var(--color-black);
-    text-align: center;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h1);
+  margin-bottom: 2.5rem; /* 40px */
 }
 
 /*  THEMEING   */
 /*****************/
 
 .skin-medium {
-    background-color: var(--color-grey);
+  background-color: var(--color-grey);
 }
 
 .skin-light {
-    background-color: var(--color-light-grey);
+  background-color: var(--color-light-grey);
 }
 
-/*   COMPONENTS  */
+/*    LAYOUT     */
 /*****************/
+
+/*  SITE HEADER  */
+
+.site-header {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+}
+
+.branding a {
+  color: var(--color-white);
+  font-family: var(--ff-heading);
+  font-size: 2.8125rem;
+  text-decoration: none;
+  margin-inline-end: 2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+}
+
+.main-nav__link {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.main-nav__link.active {
+  text-decoration: underline;
+}
+
+/*      MAIN      */
+
+main {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+main > h1 {
+  padding-block-start: 5rem;
+  text-align: center;
+}
+
+section > h2 {
+  padding-block-start: 2rem;
+  text-align: center;
+}
+
+.cwc {
+  max-width: 1480px;
+  margin-inline: auto;
+}
+
+/*  SITE FOOTER   */
+.site-footer {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  margin-block: auto;
+}
+
+/*   COMPONENTS   */
+/******************/
 
 /* BUTTONS */
 .btn {
-    display: inline-block;
-    font-size: 0.875rem;
-    color: var(--color-white);
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: var(--color-red);
-    border-radius: 6px;
-    padding: 0.8em 1.75em;
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--color-red);
+  border-radius: 6px;
+  padding: 0.8em 1.75em;
 }
 
 .btn-sale {
-    background-color: var(--color-green);
+  background-color: var(--color-green);
 }
 
 /* JUMBOTRON */
 .jumbotron {
-    height: 760px;
-    background-size: cover;
-    background-position: bottom left;
-    position: relative
+  height: 760px;
+  background-size: cover;
+  background-position: bottom left;
+  position: relative;
 }
 
 .jumbotron__content {
-    width: max-content;
-    position: relative;
-    top: 20%;
-    left: 10%;
-    text-align: center;
-
+  width: max-content;
+  position: relative;
+  top: 20%;
+  left: 10%;
+  text-align: center;
 }
 
 .jumbotron__cta {
-    font-size: 1.5625rem;
-    padding-inline: 5em;
+  font-size: 1.5625rem;
+  padding-inline: 5em;
 }
 
 /* REVIEWS */
-.review__img {
-    border-radius: 50%;
+
+.reviews {
+  display: flex;
 }
 
+.review__img {
+  border-radius: 50%;
+  width: 104px;
+  float: right;
+}
 
 /*   INDEX PAGE  */
 /*****************/
 
 #front-page-jumbotron {
-    background-image: url(../images/home-header.jpg);
+  background-image: url(../images/home-header.jpg);
+}
+#about-our-guitars {
+  display: flex;
+  align-items: center;
+  padding: 6.25rem;
+}
+
+#about-our-guitars ul {
+  padding-inline-start: 2rem;
+}
+
+.about-section__content {
+  flex: 1;
+  min-width: max-content;
 }
 
 #about-our-guitars img {
-border-radius: 20%;
+  border-radius: 106px;
+  flex: 1;
+  max-height: 440px;
+}
+
+/*  CONTACT PAGE   */
+/******************/
+.contact-form {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.form-wrapper {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.form-wrapper > * {
+  align-self: flex-start;
+}
+
+input,
+select,
+textarea {
+  margin-block-end: 0.5rem;
+  padding: 0.25rem;
+}
+
+.contact-form label,
+.contact-form input:not(input[type="submit"], input[type="checkbox"]),
+.contact-form textarea {
+  display: block;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 6rem;
+  margin-block-end: 1rem;
+}
+.contact-form > .col {
+  flex: 0 1 350px;
+  justify-content: center;
+}
+
+/* SINGLE PRODUCT */
+/******************/
+
+.single-product {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-block: 3rem;
+}
+
+.product-images,
+.product-body {
+  flex: 0 1 540px;
+}
+
+.product-description {
+  margin-block-end: 1.5rem;
+}
+
+.product-description p {
+  margin-block-end: 1rem;
+}
+.product-price {
+  font-size: 1.875rem;
+  margin-block-end: 3rem;
+}
+
+.product-cta {
+  text-align: center;
+}
+
+.product-image__main {
+  display: block;
+  width: 100%;
+  margin-block-end: 0.5rem;
+}
+.product-image__thumbnails {
+  display: flex;
+  max-width: 540px;
+  margin-left: auto;
+  justify-content: space-between;
+}
+.product-image__thumbnail {
+  max-width: 125px;
 }
